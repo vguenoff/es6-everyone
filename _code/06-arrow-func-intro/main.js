@@ -1,12 +1,7 @@
-{
-    const name = 'Vassil';
-    console.log(name);
-}
+const names = ['wes', 'kait', 'lux'];
 
-// let creates block scope so the output is different then the var
-for (let i = 0; i < 10; i++) {
-    console.log(i);
-    setTimeout(function() {
-        console.log(`the number is ${i}`);
-    }, 1000);
-}
+const fullNames = names.map(name => `${name} bos`);
+console.log(fullNames);
+
+const sayMyName = name => console.log(`Hello ${name}`);
+sayMyName('Wes');

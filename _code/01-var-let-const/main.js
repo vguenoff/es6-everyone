@@ -13,3 +13,5 @@ if (age > 12) {
 
 let height = 200;
 const key = 'abc123';
+console.log(key);
+console.log(height);
