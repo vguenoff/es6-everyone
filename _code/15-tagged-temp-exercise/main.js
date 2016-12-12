@@ -1,4 +1,28 @@
-// 1. Given this array: `[3,62,234,7,23,74,23,76,92]`, use the array filter method and an arrow function to create an array of the numbers greater than `70`
-const numbers = [3, 62, 234, 7, 23, 74, 23, 76, 92];
-const large = numbers.filter(num => num > 70);
-console.log(large);
+const dict = {
+    HTML: 'Hypertext Markup Language',
+    CSS: 'Cascading Style Sheets',
+    JS: 'JavaScript'
+};
+
+function addAbbreviations(strings, ...values) {
+    const abbreviated = values.map(value => {
+        if (dict[value]) {
+            return `<abbr title="${dict[value]}">${value}</abbr>`;
+        }
+        return value;
+    });
+
+    return strings.reduce((sentence, string, i) => {
+        return `${sentence}${string}${abbreviated[i] || ''}`;
+    }, '');
+
+}
+
+const first = 'Wes';
+const last = 'Bos';
+const sentence = addAbbreviations`Hello, my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'} and ${'JS'}.`;
+
+const bio = document.querySelector('.bio');
+const p = document.createElement('p');
+p.innerHTML = sentence;
+bio.appendChild(p);
