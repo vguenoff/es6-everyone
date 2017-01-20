@@ -1,6 +1,5 @@
-const name = 'Snikers';
+const name = 'Snickers';
 const age = 2;
-const sentence = `My husky ${name} is ${age * 7} dog years old.`;
 
+const sentence = `My dogs ${name} is ${7 * age} years old`;
 console.log(sentence);
-
