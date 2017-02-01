@@ -36,5 +36,5 @@ console.log(ps);
 for (const paragraph of ps) {
   paragraph.addEventListener('click', function() {
     console.log(this.textContent);
-  })
+  });
 }
